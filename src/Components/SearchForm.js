@@ -1,7 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../context";
-import Loading from "./Loading";
-import Cocktail from "./Cocktail";
+
 
 const SearchForm = () => {
     const {setSearchTerm} = useGlobalContext()
@@ -20,7 +19,7 @@ const SearchForm = () => {
 
     return (
         <section className="section search">
-            <form className="search-form" onSubmit={handleSubmit}>
+            <form className="search-form form-control" onSubmit={handleSubmit}>
                 <label htmlFor="name">search your favorite cocktail</label>
                 <input type= 'text' id="name" ref={searchValue} onChange = {searchCocktail} />
             </form>
